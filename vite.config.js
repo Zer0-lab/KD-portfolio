@@ -3,18 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Zer0-lab.github.io/",
+  base: "./",
   build: {
     outDir: "dist",
-    rollupOptions: {
-      input: {
-        main: "./src/main.jsx",
-        index: "./index.html",
-      },
-    },
-  },
-  esbuild: {
-    loader: "jsx",
-    jsx: "automatic",
   },
 });
