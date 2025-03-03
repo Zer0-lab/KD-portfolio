@@ -10,4 +10,7 @@ export default defineConfig({
       input: "index.html",
     },
   },
+  esbuild: {
+    loader: "jsx",
+  },
 });
