@@ -7,14 +7,14 @@ export default defineConfig({
   build: {
     outDir: "dist",
     rollupOptions: {
-      input: "index.html",
+      input: {
+        main: "./src/main.jsx",
+        index: "./index.html",
+      },
     },
   },
   esbuild: {
     loader: "jsx",
     jsx: "automatic",
-  },
-  optimizeDeps: {
-    include: ["./src/main.jsx"],
   },
 });
